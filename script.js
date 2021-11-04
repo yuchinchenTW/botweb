@@ -8,6 +8,12 @@
 該網站為教育學習使用，內容出自於https://www.8591.com.tw/，若8591提出刪除網站之相關要求，本網站將自行刪除。*/
 //如果你在看這裡 代表你在看源碼 然後這程式有很多bug 不過管他的  想用就拿去用吧 後果自負
 // IF YOU ARE WATCHING THIS WHICH MEANS THAT YOU ARE WATCHING SOURCE CODE. BTW THERE ARE LOTS OF BUG IN HERE BUT WHATEVER .COPY IT AS YOU NEED IT, PROCEED AT YOUR OWN RISK
+var options = {
+  hostname: "",
+  localAddress: '202.1.1.1'
+};
+
+
 let array = [];
 // function to get the raw data
 const getRawData = (URL) => {
@@ -54,7 +60,7 @@ function reset() {
 const test = async function () {
   result = "";
   while (bool) {
-    await sleep(330);
+    await sleep(100);
     URL = " https://www.8591.com.tw/mallList-list.html?searchGame=859&searchType=0&searchKey=&firstRow=" + section;
     console.log(URL);
     const _constdata = await getRawData(URL);
@@ -135,7 +141,7 @@ const tyt = async function (item, maxrange, minrange) {
   result = "";
 
   while (bool) {
-    await sleep(330);
+    await sleep(100);
     const ttempp = "https://cors-anywhere.herokuapp.com/";
     URL = "https://www.8591.com.tw/mallList-list.html?id=859&%251=&gst=2&searchKey=" + item + "&firstRow=" + section;
     //URL=ttempp.concat(URL);
@@ -312,7 +318,7 @@ const fyi = async function (item, maxrange, minrange) {
   result = "";
 
   while (bool) {
-    await sleep(330);
+    await sleep(100);
     const ttempp = "https://cors-anywhere.herokuapp.com/";
     //URL = "https://www.8591.com.tw/mallList-list.html?id=859&%251=&gst=2&searchKey=" + item + "&firstRow=" + section;
     URL = "https://www.8591.com.tw/mallList-list.html?searchGame=859&buyStatus=1&searchKey="+item+"&firstRow="+section;
